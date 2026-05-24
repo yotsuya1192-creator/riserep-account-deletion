@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RiseRep Alarm - Account and Data Deletion</title>
+  <meta name="description" content="Account and data deletion instructions for RiseRep Alarm.">
+  <style>
+    :root {
+      --bg: #fff8f0;
+      --card: #ffffff;
+      --text: #242424;
+      --muted: #666666;
+      --accent: #f97316;
+      --accent-dark: #c2410c;
+      --border: #f0d7bf;
+      --soft: #fff1e6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(249, 115, 22, 0.18), transparent 35%),
+        linear-gradient(180deg, var(--bg), #ffffff);
+    }
+
+    .wrap {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    header {
+      padding: 32px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #ffedd5, #ffffff);
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 50px rgba(124, 45, 18, 0.12);
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    nav {
+      margin: 20px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      color: var(--accent-dark);
+      background: #fff;
+    }
+
+    nav a:hover,
+    .button:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+      background: var(--soft);
+    }
+
+    main {
+      display: grid;
+      gap: 18px;
+    }
+
+    section {
+      padding: 28px;
+      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(124, 45, 18, 0.07);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.3rem;
+      margin: 10px 0 0;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .request-box {
+      padding: 18px;
+      border-radius: 18px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      margin: 14px 0;
+    }
+
+    .email {
+      font-weight: 800;
+      color: var(--accent-dark);
+      overflow-wrap: anywhere;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .lang-title {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #ffffff;
+      background: var(--accent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    code {
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: #f5f5f5;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(100% - 20px, 960px);
+        padding: 24px 0 48px;
+      }
+
+      header,
+      section {
+        padding: 22px;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Account & Data Deletion</div>
+      <h1>RiseRep Alarm<br>アカウントとデータの削除</h1>
+      <p class="lead">
+        このページでは、RiseRep Alarm のアカウントおよび関連データの削除をリクエストする方法、
+        削除されるデータ、保持される可能性があるデータ、保持期間について説明します。
+      </p>
+      <nav aria-label="Page navigation">
+        <a href="#request">削除リクエスト方法</a>
+        <a href="#deleted">削除されるデータ</a>
+        <a href="#retained">保持されるデータ</a>
+        <a href="#english">English</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="request">
+        <span class="lang-title">日本語</span>
+        <h2>アカウント削除のリクエスト方法</h2>
+        <p>
+          RiseRep Alarm のアカウントと関連データの削除を希望する場合は、
+          以下のメールアドレスまでご連絡ください。
+        </p>
+
+        <div class="request-box">
+          <p>送信先：</p>
+          <p class="email"><a href="mailto:yotsuya1192@gmail.com?subject=RiseRep%20Alarm%20%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E5%89%8A%E9%99%A4%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">yotsuya1192@gmail.com</a></p>
+          <p>件名：</p>
+          <p><code>RiseRep Alarm アカウント削除リクエスト</code></p>
+        </div>
+
+        <p>メール本文には以下を記載してください。</p>
+        <ul>
+          <li>アプリ名：RiseRep Alarm</li>
+          <li>Googleログインに使用したメールアドレス</li>
+          <li>アカウントと関連データの削除を希望する旨</li>
+        </ul>
+
+        <p>
+          本人確認および対象アカウントの確認後、合理的な期間内にアカウントと関連データを削除します。
+        </p>
+      </section>
+
+      <section id="deleted">
+        <h2>削除されるデータ</h2>
+        <p>削除リクエストを受け付けた場合、以下のデータを削除します。</p>
+        <ul>
+          <li>Firebase Authentication に保存されたアカウント情報</li>
+          <li>Firestore に保存されたユーザーデータ</li>
+          <li>ユーザーID</li>
+          <li>表示名</li>
+          <li>アイコン情報</li>
+          <li>スクワット回数</li>
+          <li>ランキング表示に使用されるデータ</li>
+        </ul>
+      </section>
+
+      <section id="retained">
+        <h2>保持される可能性があるデータと保持期間</h2>
+        <p>
+          以下のデータは、不正防止、セキュリティ、法令遵守、問い合わせ対応のため、
+          必要な範囲で保持される場合があります。
+        </p>
+        <ul>
+          <li>削除依頼に関する問い合わせメール</li>
+          <li>不正利用防止やセキュリティ確認に必要な最小限の記録</li>
+          <li>Google Play、AdMob、Firebaseなどの第三者サービス側で保持されるログや広告関連データ</li>
+        </ul>
+
+        <h3>保持期間</h3>
+        <ul>
+          <li>削除対象のアカウントデータは、本人確認および処理完了後、通常30日以内に削除します。</li>
+          <li>問い合わせメールや削除対応記録は、問い合わせ対応、不正防止、法令遵守のため、最大1年間保持する場合があります。</li>
+          <li>第三者サービスで保持されるデータについては、各サービスのポリシーに従って処理されます。</li>
+        </ul>
+      </section>
+
+      <section id="english">
+        <span class="lang-title">English</span>
+        <h2>Account and Data Deletion Request</h2>
+        <p>
+          This page explains how users can request deletion of their RiseRep Alarm account and associated data,
+          what data will be deleted, what data may be retained, and the retention period.
+        </p>
+
+        <h3>How to request account deletion</h3>
+        <p>
+          To request deletion of your RiseRep Alarm account and associated data, please contact us at:
+        </p>
+
+        <div class="request-box">
+          <p class="email"><a href="mailto:yotsuya1192@gmail.com?subject=RiseRep%20Alarm%20Account%20Deletion%20Request">yotsuya1192@gmail.com</a></p>
+          <p>Email subject:</p>
+          <p><code>RiseRep Alarm Account Deletion Request</code></p>
+        </div>
+
+        <p>Please include the following information in your email:</p>
+        <ul>
+          <li>App name: RiseRep Alarm</li>
+          <li>The email address used for Google sign-in</li>
+          <li>A statement that you would like to delete your account and associated data</li>
+        </ul>
+
+        <h3>Data that will be deleted</h3>
+        <ul>
+          <li>Account information stored in Firebase Authentication</li>
+          <li>User data stored in Firestore</li>
+          <li>User ID</li>
+          <li>Display name</li>
+          <li>Icon information</li>
+          <li>Squat count records</li>
+          <li>Data used for ranking display</li>
+        </ul>
+
+        <h3>Data that may be retained</h3>
+        <ul>
+          <li>Emails related to deletion requests</li>
+          <li>Minimum records necessary for fraud prevention, security, or legal compliance</li>
+          <li>Logs or advertising-related data retained by third-party services such as Google Play, AdMob, or Firebase</li>
+        </ul>
+
+        <h3>Retention period</h3>
+        <ul>
+          <li>Account data subject to deletion will normally be deleted within 30 days after verification and processing are complete.</li>
+          <li>Support emails and deletion request records may be retained for up to 1 year for support, fraud prevention, security, or legal compliance.</li>
+          <li>Data retained by third-party services is handled according to each service provider's policy.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Developer Information</h2>
+        <ul>
+          <li>App name: RiseRep Alarm</li>
+          <li>Developer: RiseRep Alarm Developer</li>
+          <li>Contact: <a href="mailto:yotsuya1192@gmail.com">yotsuya1192@gmail.com</a></li>
+          <li>Last updated: May 24, 2026</li>
+        </ul>
+        <p class="note">
+          This page is provided for Google Play account and data deletion requirements.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 RiseRep Alarm. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
